@@ -50,8 +50,12 @@ public static class Program
                 int foodAmount = zoo.GetAmountOfFoodForAnimals();
                 Console.WriteLine($"Животным необходимо {foodAmount} еды.");
                 break;
-            case 3:
-                zoo.GetInfoAboutAnimals();
+            case 3: 
+                var contactAnimals = zoo.GetAnimalsForContactZoo();
+                foreach (var animal in contactAnimals)
+                {
+                    Console.WriteLine(animal.ToString());
+                }
                 break;
         }
     }
