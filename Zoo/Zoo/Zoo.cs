@@ -27,7 +27,7 @@ public class Zoo
         }
         else
         {
-            Console.WriteLine("Animal can't be added into Zoo.");
+            Console.WriteLine("Животное не может быть добавлено в зоопарк.");
         }
     }
 
