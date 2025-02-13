@@ -3,29 +3,28 @@ using Zoo.Animals;
 
 namespace ZooTests
 {
-    [TestFixture]
     public class VetClinicTests
     {
-        [Test]
-        public void IsAnimalCanBeInZoo_WhenAnimalIsHealthy_ReturnsTrue()
+        [Fact]
+        public void IsAnimalCanBeInZoo_ReturnsTrue_WhenAnimalIsHealthy()
         {
-            var vetClinic = new VetClinic();
-            var tiger = new Tiger(5, true, "Шерхан");
-            
-            var result = vetClinic.IsAnimalCanBeInZoo(tiger);
-            
-            Assert.Equals(result, true);
+            var clinic = new VetClinic();
+            var tiger = new Tiger(10, true, "Шерхан");
+
+            var result = clinic.IsAnimalCanBeInZoo(tiger);
+
+            Assert.True(result);
         }
 
-        [Test]
-        public void IsAnimalCanBeInZoo_WhenAnimalIsNotHealthy_ReturnsFalse()
+        [Fact]
+        public void IsAnimalCanBeInZoo_ReturnsFalse_WhenAnimalIsNotHealthy()
         {
-            var vetClinic = new VetClinic();
-            var rabbit = new Rabbit(2, false, "Бакс", 8);
-            
-            var result = vetClinic.IsAnimalCanBeInZoo(rabbit);
-            
-            Assert.Equals(result, false);
+            var clinic = new VetClinic();
+            var rabbit = new Rabbit(3, false, "Пушистик", 5);
+
+            var result = clinic.IsAnimalCanBeInZoo(rabbit);
+
+            Assert.False(result);
         }
     }
 }

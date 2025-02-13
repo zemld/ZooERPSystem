@@ -16,3 +16,4 @@
 /Users/zemld/RiderProjects/ZooKpo/Zoo/obj/Debug/net9.0/Zoo.pdb
 /Users/zemld/RiderProjects/ZooKpo/Zoo/obj/Debug/net9.0/Zoo.genruntimeconfig.cache
 /Users/zemld/RiderProjects/ZooKpo/Zoo/obj/Debug/net9.0/ref/Zoo.dll
+/Users/zemld/RiderProjects/ZooKpo/Zoo/obj/Debug/net9.0/Zoo.sourcelink.json
