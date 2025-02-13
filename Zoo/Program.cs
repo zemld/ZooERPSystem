@@ -13,7 +13,7 @@ public static class Program
         {
             zoo = serviceProvider.GetRequiredService<Zoo>();
         }
-        catch (Exception e)
+        catch (Exception)
         {
             zoo = new Zoo(new VetClinic());
         }
@@ -25,6 +25,25 @@ public static class Program
             MakeAction(choice, zoo);
             WaitForKeyTap();
         } while (IsRepeatNeeded());
+    }
+    
+    public static Menu CreateMainMenu()
+    {
+        Menu menu = new Menu();
+        menu.AddOption(new MenuOption("Добавить новое животное."));
+        menu.AddOption(new MenuOption("Получить количество еды для животных."));
+        menu.AddOption(new MenuOption("Получить информацию о животных для контактного зоопарка"));
+        return menu;
+    }
+
+    public static Menu CreateAnimalsMenu()
+    {
+        Menu animalsMenu = new Menu();
+        animalsMenu.AddOption(new MenuOption("Обезьяна."));
+        animalsMenu.AddOption(new MenuOption("Кролик."));
+        animalsMenu.AddOption(new MenuOption("Тигр."));
+        animalsMenu.AddOption(new MenuOption("Волк."));
+        return animalsMenu;
     }
     
     private static ServiceProvider GetServiceProvider()
@@ -153,25 +172,6 @@ public static class Program
         } while (isRepeatNeeded);
 
         return kindness;
-    }
-    
-    private static Menu CreateMainMenu()
-    {
-        Menu menu = new Menu();
-        menu.AddOption(new MenuOption("Добавить новое животное."));
-        menu.AddOption(new MenuOption("Получить количество еды для животных."));
-        menu.AddOption(new MenuOption("Получить информацию о животных для контактного зоопарка"));
-        return menu;
-    }
-
-    private static Menu CreateAnimalsMenu()
-    {
-        Menu animalsMenu = new Menu();
-        animalsMenu.AddOption(new MenuOption("Обезьяна."));
-        animalsMenu.AddOption(new MenuOption("Кролик."));
-        animalsMenu.AddOption(new MenuOption("Тигр."));
-        animalsMenu.AddOption(new MenuOption("Волк."));
-        return animalsMenu;
     }
 
     private static void WaitForKeyTap()
