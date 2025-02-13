@@ -60,5 +60,23 @@ namespace ZooTests
             Assert.Single(contactZooAnimals);
             Assert.Equal(kindMonkey, contactZooAnimals[0]);
         }
+        
+        [Fact]
+        private void GetAnimalsForContactZooReturnsHerbivoresWithHighKindness()
+        {
+            var clinic = new VetClinic();
+            var zoo = new Zoo.Zoo(clinic);
+            var kindMonkey = new Monkey(5, true, "Чичи", 7);
+            var unkindRabbit = new Rabbit(3, true, "Пушистик", 2);
+            var tiger = new Tiger(10, true, "Шерхан");
+            zoo.AddAnimal(kindMonkey);
+            zoo.AddAnimal(unkindRabbit);
+            zoo.AddAnimal(tiger);
+
+            var contactZooAnimals = zoo.GetAnimalsForContactZoo();
+
+            Assert.Single(contactZooAnimals);
+            Assert.Equal(kindMonkey, contactZooAnimals[0]);
+        }
     }
 }
