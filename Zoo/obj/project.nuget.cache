@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "T8q1GZ0zR3Q=",
+  "success": true,
+  "projectFilePath": "/Users/zemld/RiderProjects/ZooKpo/Zoo/Zoo.csproj",
+  "expectedPackageFiles": [
+    "/Users/zemld/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.2/microsoft.extensions.dependencyinjection.9.0.2.nupkg.sha512",
+    "/Users/zemld/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.2/microsoft.extensions.dependencyinjection.abstractions.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
