@@ -1,8 +1,5 @@
-using System.Runtime.CompilerServices;
 using Microsoft.Extensions.DependencyInjection;
-using Zoo.Abstractions;
 using Zoo.Animals;
-using Zoo.Items;
 
 namespace Zoo;
 
